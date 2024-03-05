@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="/img/open-locker.png" />
+  <title>Decodificador</title>
+</head>
+
+<body>
+
+  <main class="container">
+    <img id="client-logo" src="/img/logo.svg" />
+    <section class="container-input">
+      <textarea name="text" cols="30" rows="10" class="input-txt" id="input-txt-area" placeholder="Digite seu texto"></textarea>
+      <div class="container-info">
+        <p class="info-msg"><img src="/img/atention.svg" width="12px" alt="ponto de exclamação" /> Apenas letras
+          minúsculas e sem acentos</p>
+      </div>
+      <div class="container-btn">
+        <button class="button btn-1" id="button-encrypt">
+          Criptografar
+        </button>
+        <button class="button btn-2" id="button-decrypt">
+          Descriptografar
+        </button>
+      </div>
+    </section>
+    <section class="container-output">
+      <div class="output-space" id="output-area">
+        <div class="output-decoration-404" id="hidden1">
+          <img class="output-decoration-pic" src="./img/lupa.svg"
+            alt="pessoa ajoalhada observando um diamante com uma lupa">
+        </div>
+        <h2 class="output-msg-404" id="hidden2">
+          Nenhuma mensagem encontrada
+        </h2>
+        <textarea class="output-txt" id="output-txt-area" cols="30" rows="10" placeholder="[Digite um texto que você queira criptografar ou descriptografar]">    
+        </textarea>
+          <button class="button btn-3" id="button-copy">
+            <!-- <span class="tooltiptext" id="tooltipAlert"></span> -->
+            Copiar
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <section >
+      &copy; Alura 2024 | Developed by <a href="https://github.com/zbkllz" class="gitbub" target="_blank">Larissa
+        Pereira</a>
+        <div id="challenge-badge">
+          <img src="/img/challenges.1689860202.svg" width="150px">
+        </div>
+    </section>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
