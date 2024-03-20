@@ -45,6 +45,7 @@ buttonEncrypt.onclick = () => {
   outputArea.style.justifyContent = "start";
 
   outputAreaText.innerHTML = arrayListEncrypt.join("");
+  outputAreaText.classList.remove("hidden");
 };
 
 buttonDecrypt.onclick = () => {
@@ -67,6 +68,7 @@ buttonDecrypt.onclick = () => {
   outputArea.style.justifyContent = "start";
 
   outputAreaText.innerHTML = decrypt;
+  outputAreaText.classList.remove("hidden");
 };
 
 buttonCopy.onclick = () => {
@@ -78,10 +80,9 @@ buttonCopy.onclick = () => {
   outputAreaText.focus();
   outputAreaText.setSelectionRange(0, outputAreaText.value.length);
 
-
   const successful = document.execCommand("copy");
   if (successful) {
-    toolTip.innerHTML="Texto copiado para a área de transferência!";
+    toolTip.innerHTML = "Texto copiado para a área de transferência!";
     inputTextArea.value = "";
   } else {
     toolTip.innerHTML("Erro ao copiar texto para a área de transferência.");
