@@ -16,7 +16,7 @@ buttonCopy.style.display = "none";
 
 buttonEncrypt.onclick = () => {
   const textEntry = document.getElementById("input-txt-area").value;
-  const outputArea = document.getElementById("output-area");
+  const outputArea = document.getElementById("output-box");
   const outputAreaText = document.getElementById("output-txt-area");
   const hidePicture = document.getElementById("hidden1");
   const hideMsg = document.getElementById("hidden2");
@@ -49,7 +49,7 @@ buttonEncrypt.onclick = () => {
 
 buttonDecrypt.onclick = () => {
   const textEntry = document.getElementById("input-txt-area").value;
-  const outputArea = document.getElementById("output-area");
+  const outputArea = document.getElementById("output-box");
   const outputAreaText = document.getElementById("output-txt-area");
   const hidePicture = document.getElementById("hidden1");
   const hideMsg = document.getElementById("hidden2");
@@ -72,16 +72,18 @@ buttonDecrypt.onclick = () => {
 buttonCopy.onclick = () => {
   const inputTextArea = document.getElementById("input-txt-area");
   const outputAreaText = document.getElementById("output-txt-area");
+  const toolTip = document.getElementById("tooltip-alert");
 
   // Garantindo que finalmente essa disgrama funciona
   outputAreaText.focus();
   outputAreaText.setSelectionRange(0, outputAreaText.value.length);
 
+
   const successful = document.execCommand("copy");
   if (successful) {
-    alert("Texto copiado para a área de transferência!");
+    toolTip.innerHTML="Texto copiado para a área de transferência!";
     inputTextArea.value = "";
   } else {
-    alert("Erro ao copiar texto para a área de transferência.");
+    toolTip.innerHTML("Erro ao copiar texto para a área de transferência.");
   }
 };

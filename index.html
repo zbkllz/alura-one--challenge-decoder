@@ -10,52 +10,54 @@
 </head>
 
 <body>
-
+  <header>    <img id="client-logo" src="/img/logo.svg" /></header>
   <main class="container">
-    <img id="client-logo" src="/img/logo.svg" />
-    <section class="container-input">
-      <textarea name="text" cols="30" rows="10" class="input-txt" id="input-txt-area" placeholder="Digite seu texto"></textarea>
-      <div class="container-info">
-        <p class="info-msg"><img src="/img/atention.svg" width="12px" alt="ponto de exclamação" /> Apenas letras
-          minúsculas e sem acentos</p>
-      </div>
-      <div class="container-btn">
-        <button class="button btn-1" id="button-encrypt">
+    <section class="container__input" id="left-column">
+      <textarea name="text" cols="50" rows="20" 
+      class="container__input_txt" id="input-txt-area"
+        placeholder="Digite seu texto"></textarea>
+      <section class="container__rules">
+        <p class="container__rules_warning">
+          <img src="/img/atention.svg" alt="ponto de exclamação" id="warn" /> 
+           Apenas letras minúsculas e sem acentos</p>
+      </section>
+      <section class="container__input_buttons">
+        <button class="button btn_1" id="button-encrypt">
           Criptografar
         </button>
-        <button class="button btn-2" id="button-decrypt">
+        <button class="button btn_2" id="button-decrypt">
           Descriptografar
         </button>
-      </div>
+      </section>
     </section>
-    <section class="container-output">
-      <div class="output-space" id="output-area">
-        <div class="output-decoration-404" id="hidden1">
-          <img class="output-decoration-pic" src="./img/lupa.svg"
-            alt="pessoa ajoalhada observando um diamante com uma lupa">
+    <section class="container__output" id="right-column">
+      <div class="container__output_box" id="output-box">
+        <div id="hidden1">
+          <img class="container__output_decoration" src="./img/lupa.svg"
+            alt="pessoa ajoelhada usando lupa para observar um diamante">
         </div>
-        <h2 class="output-msg-404" id="hidden2">
-          Nenhuma mensagem encontrada
-        </h2>
-        <textarea class="output-txt" id="output-txt-area" cols="30" rows="10" placeholder="[Digite um texto que você queira criptografar ou descriptografar]">    
+        <div class="container__output_404" id="hidden2">
+          <h2 id="msg_404">Nenhuma mensagem encontrada</h2>
+          <p id="msg_2_404">Digite um texto que você queira criptografar ou descriptografar</p>
+        </div>
+        <textarea cols="20" rows="15" class="container__output_txt" id="output-txt-area">
         </textarea>
-          <button class="button btn-3" id="button-copy">
-            <!-- <span class="tooltiptext" id="tooltipAlert"></span> -->
+        <div class="container__output_btn">
+          <span class="tooltip" id="tooltip-alert"></span>
+          <button class="button btn_3" id="button-copy">
             Copiar
           </button>
         </div>
       </div>
-
     </section>
   </main>
 
   <footer>
-    <section >
-      &copy; Alura 2024 | Developed by <a href="https://github.com/zbkllz" class="gitbub" target="_blank">Larissa
-        Pereira</a>
-        <div id="challenge-badge">
-          <img src="/img/challenges.1689860202.svg" width="150px">
-        </div>
+    <section class="container__footer">
+      <img src="/img/challenges.1689860202.svg" id="badge">
+      <p>&copy; Alura 2024 | Developed by <a href="https://github.com/zbkllz" id="github" target="_blank">Larissa
+        Pereira</a>     </p>
+
     </section>
   </footer>
 
